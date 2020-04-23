@@ -1,0 +1,13 @@
+parameters:
+    level: 8
+    paths:
+        - src
+    excludes_analyse:
+        - src/Migrations/*
+    ignoreErrors:
+        - '#Property [a-zA-Z0-9\\_]+::\$[a-zA-Z0-9]* has no typehint specified.#'
+    reportUnmatchedIgnoredErrors: false
+    doctrine:
+        objectManagerLoader: tests/phpstan/manager.php
+    symfony:
+        container_xml_path: '%rootDir%/../../../var/cache/dev/App_KernelDevDebugContainer.xml'
